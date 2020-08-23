@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Product
+{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <div class="row mt-5">
+    <div class="col-10 mx-auto col-md-6 my-3">
+      <img src="{% static 'img/product-5.jpg' %}" alt="">
+    </div>
+    <div class="col-10 mx-auto col-md-6 my-3">
+      <div>
+        <h1 class="product_title">Red Jug</h1>
+        <h5 class="text-info font-italic mb-3">
+          <span class="mr-1">€</span>20
+        </h5>
+        <p class="product_description">Product Description</p>
+        <p class="text-justify product_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et vel iste incidunt magni
+          dignissimos velit voluptates, saepe nihil labore, quasi soluta maxime officia sapiente suscipit, unde similique! Sit,
+          necessitatibus? Minima!</p>
+        <p class="text-justify product_text"><b>Out of Stock</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
