@@ -11,7 +11,9 @@
       <li class="nav-item dropdown">
         <a class="nav-link text-uppercase font-weight-bold px-3 dropdown-toggle" href="" data-toggle="dropdown">Products</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">Filter Jugs</a>
+          {% for category in links %}
+          <a class="dropdown-item" href="{{category.get_url}}">Filter Jugs</a>
+          {% endfor %}
           <a class="dropdown-item" href="">Tap Water Filters</a>
           <a class="dropdown-item" href="">Filter Housings</a>
           <a class="dropdown-item" href="">Under Sink Systems</a>

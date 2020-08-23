@@ -10,7 +10,39 @@ Home
     <img style="width: 100%;" src="{% static 'img/main_page/world-map.jpg' %}" alt="aquaphor world-map" />
   </div>
 </div>
-<div class="wrapper">
+<div class="py-4">
+  <div class="container">
+    <div class="col-10 mx-auto my-2 text-center">
+      <h1 class="text-capitalize font-weight-bold">
+        All Products
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    {% for i in '12345678'%}
+    <div class="col-9 mx-auto col-md-6 col-lg-3">
+      <div class="card mb-4">
+        <div class="p-4">
+          <img src="{% static 'img/product-1.jpg' %}" class="card-img-top" alt="">
+        </div>
+
+        <div class="card-footer d-flex justify-content-between">
+          <p class="font-weight-bold mb-0">
+            Green Jug
+          </p>
+          <h5 class="text-info font-italic mb-0">
+            <span class="mr-1">€</span>20
+          </h5>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- <div class="wrapper">
   <section class="categories-section">
     <h2>Discover our range of products</h2>
     <div class="categories-section__flex">
@@ -36,8 +68,7 @@ Home
       </a>
     </div>
   </section>
-
-</div>
+</div> -->
 
 
 {% endblock %}
