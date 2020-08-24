@@ -22,19 +22,19 @@ Home
 
 <div class="container">
   <div class="row">
-    {% for i in '12345678'%}
+    {% for product in products %}
     <div class="col-9 mx-auto col-md-6 col-lg-3">
       <div class="card mb-4">
         <div class="p-4">
-          <img src="{% static 'img/product-1.jpg' %}" class="card-img-top" alt="">
+          <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
         </div>
 
         <div class="card-footer d-flex justify-content-between">
           <p class="font-weight-bold mb-0">
-            Green Jug
+            {{product.name}}
           </p>
           <h5 class="text-info font-italic mb-0">
-            <span class="mr-1">€</span>20
+            <span class="mr-1">€</span>{{product.price}}
           </h5>
         </div>
       </div>
