@@ -18,8 +18,13 @@ def shop(request):
     return render(request, 'shop.html')
 
 
-def productPage(request):
-    return render(request, 'product.html')
+def productPage(request, category_slug, product_slug):
+    try:
+        product = Product.objects.get(
+            category__slug=category_slug, slug=product_slug)
+    except Exception as e:
+        raise e
+    return render(request, 'product.html', {'product': product})
 
 
 def contacts(request):
