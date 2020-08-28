@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Cart
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+  <br>
+  <div class="text-center product_title">
+    Your shopping cart
+  </div>
+  <div class="row mx-auto">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th colspan="4">
+              Your items
+            </th>
+          </tr>
+        </thead>
+        {% for i in '123' %}
+        <tr>
+          <td>
+            <a href="">
+              <img src="{% static 'media/product/aquaphor_Compact_B25_lime_side_flip_flop_edited-502x502.jpg' %}" witdth="100" height="100"
+                alt="">
+            </a>
+          </td>
+          <td class="text-left">
+            Green Jug
+            <br>
+            SKU: 100
+            <br>
+            Unit Price: €20
+            <br>
+            Qty: 2 x €20
+          </td>
+          <td>
+            €40
+          </td>
+          <td>
+            &nbsp;<a href=""><i class="fas fa-plus-circle"></i></a>
+            &nbsp;<a href=""><i class="fas fa-minus-circle"></i></a>
+            &nbsp;<a href=""><i class="fas fa-trash-alt"></i></a>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th colspan="4">
+              Check out
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Please review your cart items before proceeding with the payment.
+            </td>
+          </tr>
+          <tr>
+            <td class="text-left">
+              Your total is: <strong>€40</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="mx-auto">
+        <a class="no_decor" href="">
+          <button type="button" class="btn btn-lg btn-block btn_blue text-white">
+            Continue Shopping
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

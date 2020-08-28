@@ -27,6 +27,10 @@ def productPage(request, category_slug, product_slug):
     return render(request, 'product.html', {'product': product})
 
 
+def cart(request):
+    return render(request, 'cart.html')
+
+
 def contacts(request):
     return render(request, 'contacts.html')
 # Create your views here.
