@@ -28,10 +28,7 @@ SECRET_KEY = config('DB_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = [
-    os.environ.get('HEROKU_HOSTNAME'),
-    '127.0.0.1'
-]
+ALLOWED_HOSTS = ['kaidoso-ms4-aquaphor.herokuapp.com', 'localhost']
 
 
 # Application definition
