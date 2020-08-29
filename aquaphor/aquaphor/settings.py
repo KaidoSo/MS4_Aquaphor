@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 from decouple import config
 
@@ -80,11 +81,15 @@ WSGI_APPLICATION = 'aquaphor.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': config('DB_NAME'),
-    }
+    'default': dj_database_url.parse('postgres://gnorkibguxvtcm:f68ac793da1e430561430f467b8369414acbb9f949ec9331da5a2cc437d682f2@ec2-54-247-94-127.eu-west-1.compute.amazonaws.com:5432/d322l4dfhq9fs2')
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': config('DB_NAME'),
+#     }
+# }
 
 
 # Password validation
