@@ -7,9 +7,9 @@
     <a class="navbar-brand" href="/" title="Aquaphor"><img src="{% static 'img/main_page/Aquaphor_ENG.svg' %}" alt="Aquaphor"></a>
   </div>
   <div class="collapse navbar-collapse" id="nav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
-        <a class="nav-link text-uppercase font-weight-bold px-3 dropdown-toggle" href="" data-toggle="dropdown">Products</a>
+        <a class="nav-link text-uppercase font-weight-bold px-3 dropdown-toggle" href="" data-toggle="dropdown">Store</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="{% url 'home' %}">All Products</a>
           {% for category in links %}
