@@ -41,6 +41,11 @@ body {
   letter-spacing: .2em;
 }
 
+.errorlist li {
+  color: red;
+  font-weight: bold;
+}
+
 .categories-section {
   display: flex;
   flex-direction: column;
