@@ -58,8 +58,10 @@ Cart
             &nbsp;<a href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-trash-alt cart_icon"></i></a>
           </td>
           {% else %}
-          &nbsp;<a href="{% url 'cart_remove' cart_item.product.id %}"><i class="fas fa-minus-circle cart_icon"></i></a>
-          &nbsp;<a href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-trash-alt cart_icon"></i></a>
+          <td>
+            &nbsp;<a href="{% url 'cart_remove' cart_item.product.id %}"><i class="fas fa-minus-circle cart_icon"></i></a>
+            &nbsp;<a href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-trash-alt cart_icon"></i></a>
+          </td>
           {% endif %}
         </tr>
         {% endfor %}
