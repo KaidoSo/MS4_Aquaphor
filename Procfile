@@ -1,1 +1,1 @@
-web: gunicorn aquaphor.wsgi:manage.py
+web: gunicorn aquaphor:manage.py
