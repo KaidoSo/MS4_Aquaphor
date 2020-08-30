@@ -8,6 +8,8 @@ from .forms import SignUpForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
+from django.template.loader import get_template
+from django.core.mail import EmailMessage
 
 
 def home(request, category_slug=None):
@@ -141,6 +143,12 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
 
                     # print a message when the order is created
                     print('the order has been created')
+                try:
+                    sendEmail(order_details.id)
+                    print('The order email has been sent')
+                except IOError as e:
+                    return e
+
                 return redirect('thanks_page', order_details.id)
             except ObjectDoesNotExist:
                 pass
@@ -236,3 +244,23 @@ def viewOrder(request, order_id):
 def search(request):
     products = Product.objects.filter(name__contains=request.GET['title'])
     return render(request, 'home.html', {'products': products})
+
+
+def sendEmail(order_id):
+    transaction = Order.objects.get(id=order_id)
+    order_items = OrderItem.objects.filter(order=transaction)
+
+    try:
+        subject = "Aquaphor - New order #{}".format(transaction.id)
+        to = ['{}'.format(transaction.emailAddress)]
+        from_email = "orders@aquaphor.com"
+        order_information = {
+            'transaction': transaction,
+            'order_items': order_items
+        }
+        message = get_template('email/email.html').render(order_information)
+        msg = EmailMessage(subject, message, to=to, from_email=from_email)
+        msg.content_subtype = 'html'
+        msg.send()
+    except IOError as e:
+        return e
