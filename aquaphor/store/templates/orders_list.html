@@ -29,7 +29,7 @@ Order History
         <td>{{ order.created|date:"d M Y" }}</td>
         <td>{{ order.total }}</td>
         <td><i class="fas fa-check"></i>&nbsp;Complete</td>
-        <td><a href="">View Order</a></td>
+        <td><a href="{% url 'order_detail' order.id %}">View Order</a></td>
       </tr>
       {% endfor %}
     </tbody>
@@ -37,7 +37,7 @@ Order History
   {% else %}
   <p>You have not placed any orders yet.
     <br><br>
-    <a href="{% url 'home' %}" class="btn btn-secondary btn_blue">Continue shopping</a>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Continue shopping</a>
   </p>
   {% endif %}
 </div>
