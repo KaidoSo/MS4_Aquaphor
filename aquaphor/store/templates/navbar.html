@@ -56,5 +56,13 @@
       </li>
       {% endif %}
     </ul>
+    <form class="form-inline ml-3" action="{% url 'search' %}" , method="GET">
+      <div class="input-group">
+        <input type="text" name="title" class="form-control" placeholder="Search">
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-secondary btn_blue"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </form>
   </div>
 </nav>

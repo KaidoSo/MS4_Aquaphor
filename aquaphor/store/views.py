@@ -231,3 +231,8 @@ def viewOrder(request, order_id):
         order = Order.objects.get(id=order_id, emailAddress=email)
         order_items = OrderItem.objects.filter(order=order)
     return render(request, 'order_detail.html', {'order': order, 'order_items': order_items})
+
+
+def search(request):
+    products = Product.objects.filter(name__contains=request.GET['title'])
+    return render(request, 'home.html', {'products': products})
