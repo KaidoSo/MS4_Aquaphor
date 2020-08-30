@@ -46,6 +46,10 @@ body {
   font-weight: bold;
 }
 
+.custom_div {
+  margin-bottom: 20px !important;
+}
+
 .categories-section {
   display: flex;
   flex-direction: column;

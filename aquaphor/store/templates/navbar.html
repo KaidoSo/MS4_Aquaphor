@@ -7,7 +7,7 @@
     <a class="navbar-brand" href="/" title="Aquaphor"><img src="{% static 'img/main_page/Aquaphor_ENG.svg' %}" alt="Aquaphor"></a>
   </div>
   <div class="collapse navbar-collapse" id="nav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link text-uppercase font-weight-bold px-3 dropdown-toggle" href="" data-toggle="dropdown">Products</a>
         <div class="dropdown-menu">
@@ -22,6 +22,29 @@
       <li class="nav-item">
         <a class="nav-link text-uppercase font-weight-bold px-3" href="">Contacts</a>
       </li>
+      {% if request.user.is_authenticated and request.user.first_name %}
+      <li class="nav-item dropdown">
+        <a class="nav-link text-uppercase font-weight-bold px-3 dropdown-toggle" data-toggle="dropdown">
+          Welcome, {{ request.user.first_name }} <i class="fas fa-user circle"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-uppercase font-weight-bold px-3" href="{% url 'signout' %}">
+          Sign Out <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link text-uppercase font-weight-bold px-3" href="{% url 'signup' %}">
+          Sign Up <i class="fas fa-user-plus"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-uppercase font-weight-bold px-3" href="{% url 'signin' %}">
+          Sign In <i class="fas fa-sign-in-alt"></i>
+        </a>
+      </li>
+      {% endif %}
       {% if item_count > 0 %}
       <li class="nav-item">
         <a class="nav-link text-uppercase font-weight-bold px-3" href="{% url 'cart_detail' %}">
