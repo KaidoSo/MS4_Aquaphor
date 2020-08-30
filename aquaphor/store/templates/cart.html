@@ -94,8 +94,8 @@ Cart
           <form class="" action="" method="POST">
             {% csrf_token %}
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ data_key }}"
-              data-amount="{{ stripe_total }}" data-name="Z-Store" data-description="{{ description }}" data-locale="auto"
-              data-currency="usd" data-shipping-address="true" data-billing-address="true" data-zip-code="true">
+              data-amount="{{ stripe_total }}" data-name="Aquaphor" data-description="{{ description }}" data-locale="auto"
+              data-currency="eur" data-shipping-address="true" data-billing-address="true" data-zip-code="true">
               </script>
             <button type="button" class="btn btn-lg btn-block btn_blue text-white">
               Continue Shopping
