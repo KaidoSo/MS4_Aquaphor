@@ -85,13 +85,17 @@ WSGI_APPLICATION = 'aquaphor.wsgi.application'
 #     'default': dj_database_url.parse('postgres://gnorkibguxvtcm:f68ac793da1e430561430f467b8369414acbb9f949ec9331da5a2cc437d682f2@ec2-54-247-94-127.eu-west-1.compute.amazonaws.com:5432/d322l4dfhq9fs2')
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': config('DB_NAME'),
-    }
-}
 
+if "DATABASE_URL" in os.environ:
+    DATABASES = {'default': dj_database_url.parse(
+        os.environ.get('DATABASE_URL'))}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': config('DB_NAME'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
