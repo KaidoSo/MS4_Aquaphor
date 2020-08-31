@@ -10,17 +10,31 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
+from django.core.paginator import Paginator
 
 
 def home(request, category_slug=None):
     category_page = None
-    products = None
+    products_list = None
     if category_slug != None:
-        category_page: get_object_or_404(Category, slug=category_slug)
-        products = Product.objects.filter(
+        category_page = get_object_or_404(Category, slug=category_slug)
+        products_list = Product.objects.filter(
             category=category_page, available=True)
     else:
-        products = Product.objects.all().filter(available=True)
+        products_list = Product.objects.all().filter(available=True)
+
+    paginator = Paginator(products_list, 100)
+
+    try:
+        page = int(request.GET.get('page', '1'))
+    except:
+        page = 1
+
+    try:
+        products = paginator.page(page)
+    except(EmptyPage, InvalidPage):
+        products = paginator.page(paginator.num_pages)
+
     return render(request, 'home.html', {'category': category_page, 'products': products})
 
 
