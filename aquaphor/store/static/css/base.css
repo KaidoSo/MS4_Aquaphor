@@ -26,6 +26,11 @@ body {
 .product_text {
   padding-right: 20px;
 }
+
+.product_image {
+  width: 100%;
+}
+
 .no_decor{
   text-decoration: none!important;
 }
@@ -50,60 +55,6 @@ body {
   margin-bottom: 20px !important;
 }
 
-.categories-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 15px;
-  background-color: #f1f6ff;
-}
-
-.categories-section__flex {
-  margin: 50px auto 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.categories-section__item {
-  width: 304px;
-  margin: 0 19px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.categories-section img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.categories-section__item p {
-  color: #2b1b35;
-  padding-top: 20px;
-  text-align: center;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1.33;
-}
-
-a.categories-section__item:hover p {
-  color: #0049bc !important;
-}
-
-a.categories-section__item:hover img.usual-img {
-  display:none;
-}
-a.categories-section__item:hover img.hover-img {
-  display:unset;
-}
-a.categories-section__item img.usual-img {
-  display:unset;
-}
-a.categories-section__item img.hover-img {
-  display:none;
-}
-
 .footer {
   background-color: #0049bc;
   color: #fff;
@@ -125,45 +76,12 @@ a.categories-section__item img.hover-img {
     width: 163px;
     height: 100%;
   }
-
-  .footer {
-    display: block;
-  }
-
-  .footer__wrapper {
-    padding-bottom: 28px;
-  }
 }
 
 @media (min-width:768px) {
   .header__logo img {
     vertical-align: top;
     width: 163px
-  }
-
-  .footer__wrapper {
-    padding-top: 51px;
-    padding-bottom: 36px;
-  }
-}
-
-@media (min-width:1024px) {
-  .footer__wrapper {
-    padding-top: 45px;
-    padding-bottom: 45px
-  }
-}
-
-@media (min-width:1440px) {
-  .footer__wrapper {
-    padding-top: 43px;
-    padding-bottom: 25px
-  }
-}
-
-@media (max-width: 1440px) {
-  .categories-section__item  {
-    width: 25%;
   }
 }
 
@@ -173,35 +91,9 @@ a.categories-section__item img.hover-img {
   }
 }
 
-@media (max-width: 768px) {
-  .categories-section {
-    padding: 50px 0;
-  }
-
-  .categories-section__flex {
-    margin-top: 0;
-    flex-wrap: wrap;
-  }
-
-  .categories-section__item {
-    margin: 40px 0 0;
-    width: 50%;
-    padding: 0 23px;
-  }
-
-  .categories-section__item p {
-    padding-top: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.25;
-  }
-}
-
 @media (max-width: 360px) {
   .header__logo {
     padding-right: 12px;
   }
 }
-
-
 

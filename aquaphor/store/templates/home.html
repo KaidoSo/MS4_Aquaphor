@@ -14,7 +14,7 @@ Home
   <div class="container">
     <div class="col-10 mx-auto my-2 text-center">
       <h1 class="text-capitalize font-weight-bold">
-        Products
+        {{category.name}}
       </h1>
     </div>
   </div>
@@ -43,33 +43,4 @@ Home
     {% endfor %}
   </div>
 </div>
-<!-- <div class="wrapper">
-  <section class="categories-section">
-    <h2>Discover our range of products</h2>
-    <div class="categories-section__flex">
-      <a class="categories-section_item" href="">
-        <img class="usual-img" src="{% static 'img/main_page/Drink_water.svg' %}" alt="Drinking water filters">
-        <img class="hover-img" src="{% static 'img/main_page/Drink_water_blue.svg' %}" alt="Drinking water filters">
-        <p>Drinking water filters</p>
-      </a>
-      <a class="categories-section_item" href="">
-        <img class="usual-img" src="{% static 'img/main_page/Whole_house.svg' %}" alt="Whole house filters and softeners">
-        <img class="hover-img" src="{% static 'img/main_page/Whole_house_blue.svg' %}" alt="Whole house filters and softeners">
-        <p>Whole house filters and softeners</p>
-      </a>
-      <a class="categories-section_item" href="">
-        <img class="usual-img" src="{% static 'img/main_page/Commercial.svg' %}" alt="Commercial water filters">
-        <img class="hover-img" src="{% static 'img/main_page/Commercial_blue.svg' %}" alt="Commercial water filters">
-        <p>Drinking water filters</p>
-      </a>
-      <a class="categories-section_item" href="">
-        <img class="usual-img" src="{% static 'img/main_page/Industrial.svg' %}" alt="Industrial and Professional solutions">
-        <img class="hover-img" src="{% static 'img/main_page/Industrial_blue.svg' %}" alt="Industrial and Professional solutions">
-        <p>Industrial and Professional solutions</p>
-      </a>
-    </div>
-  </section>
-</div> -->
-
-
 {% endblock %}
