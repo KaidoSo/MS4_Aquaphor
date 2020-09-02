@@ -2,13 +2,9 @@
 Data Centric Development - Milestone Project 4 - Aquaphor by Kaido Soomlais
 </h1>
 
-<div align="center">
-    <img src="https://ibb.co/19YQv5B" href="https://https://kaidoso-ms4-aquaphor.herokuapp.com/" target="_blank" alt="" border="0">
-</div>
-
-[Aquaphor](https://https://kaidoso-ms4-aquaphor.herokuapp.com/) website created for a user to purchase water filter products. 
+[Aquaphor](https://kaidoso-ms4-aquaphor.herokuapp.com/) website created for a user to purchase water filter products. 
 It has been made so that the user can easily read & navigate around the website. Functionality has been added to allow purchasing a product quick & easy.
-Registration & log in has also been made simple & hassle-free along with information on user profile & order history. It makes a great website for purchasing products.
+Registration & log in has also been made simple & hassle-free. It makes a great website for purchasing products.
 <br><br>
 
 <h1>Table of Contents</h1>
@@ -197,9 +193,6 @@ Solution - added 'static' to MEDIA_ROOT in my final commit, but did not upload i
 
 - **Order History**
 Order History not displaying in Heroku. It works locally, and when a user is making a purchase, it also logs it in admin database, but I could not understand why it is not in Heroku.
-
--**Favicon**
-Favicon not displaying in Heroku.
 
 - **Footer not sticking to bottom**
 Footer is not on the bottom when there is not enough info to push it down naturally.

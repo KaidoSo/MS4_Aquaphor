@@ -135,7 +135,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 
 if 'USE_AWS' in os.environ:
     # Cashe control
@@ -165,8 +165,10 @@ if 'USE_AWS' in os.environ:
 STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
 
+# Crispy
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# EMail
 EMAIL_USE_TLS = True
 EMAIL_PORT = '587'
 EMAIL_HOST = 'smtp.gmail.com'
