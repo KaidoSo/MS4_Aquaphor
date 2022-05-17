@@ -32,7 +32,7 @@ toml = "==0.10.1"
 urllib3 = "==1.25.10"
 wrapt = "==1.12.1"
 Django = "==3.1.13"
-Pillow = "==9.0.0"
+Pillow = "==9.0.1"
 boto3 = "*"
 django-storages = "*"
 
