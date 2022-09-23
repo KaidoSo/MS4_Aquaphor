@@ -4,6 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+urllib3 = ">=1.26.5"
 
 [packages]
 dj-database-url = "==0.5.0"
@@ -29,7 +30,7 @@ six = "==1.15.0"
 sqlparse = "==0.3.1"
 stripe = "==2.50.0"
 toml = "==0.10.1"
-urllib3 = "==1.25.10"
+urllib3 = ">=1.26.5"
 wrapt = "==1.12.1"
 Django = "==3.1.14"
 Pillow = "==9.0.1"
